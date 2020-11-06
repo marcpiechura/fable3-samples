@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-      - run: npm install -g parcel-bundler
+      - run: npm install parcel-bundler
       - run: dotnet tool restore
       - run: dotnet fable src --run parcel build index.html        
       - name: Build And Deploy
