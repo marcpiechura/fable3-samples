@@ -23,8 +23,9 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
+      - run: npm install -g parcel-bundler
       - run: dotnet tool restore
-        
+      - run: dotnet fable src --run parcel build index.html        
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v0.0.1-preview
@@ -37,7 +38,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "api" # Api source code path - optional
           app_artifact_location: "/dist" # Built app content directory - optional
-          app_build_command: "dotnet fable src --run parcel build index.html"
+          app_build_command: ""
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
