@@ -4,5 +4,8 @@
     "@types/react": "^16.9.56",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
+  },
+  "scripts": {
+    "build" : "dotnet fable src --run parcel build index.html"
   }
 }
