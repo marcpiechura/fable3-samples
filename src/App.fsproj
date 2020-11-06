@@ -6,6 +6,7 @@
     <Compile Include="App.fs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Feliz.MaterialUI" Version="1.2.2" />
     <PackageReference Include="Fable.Elmish.React" Version="3.0.1" />
     <PackageReference Include="Feliz" Version="1.14.1" />
   </ItemGroup>
